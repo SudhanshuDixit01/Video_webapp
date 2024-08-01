@@ -10,7 +10,7 @@ const DisplayPage = () => {
   useEffect(() => {
     const fetchMedia = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/media${id}`);
+        const response = await axios.get(`https://backend-rh85.onrender.com/api/media${id}`);
         setMedia(response.data);
       } catch (error) {
         console.error(error);
