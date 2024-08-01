@@ -17,7 +17,7 @@ const UploadPage = () => {
     formData.append('video', video);
 
     try {
-      await axios.post(`http://localhost:5000/api/media/upload`, formData);
+      await axios.post(`https://backend-rh85.onrender.com/api/media/upload`, formData);
       alert('Upload successful!');
       setTitle('');
       setDescription('');
