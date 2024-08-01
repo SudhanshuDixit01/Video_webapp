@@ -11,9 +11,12 @@ const storage = multer.diskStorage({
 });
 
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET
+  cloud_name: "drkrnwxxt",
+  api_key: "474746688927346",
+  api_secret:"NbcPZCeZXcm_hFyjcvPZ2isEv0E"
+});
+cloudinary.config({
+  secure: true,
 });
 
 const upload = multer({
@@ -30,8 +33,9 @@ const upload = multer({
 
 const uploadMedia = async (req, res) => {
   try {
-    console.log(JSON.stringify(process.env));
+    // console.log(JSON.stringify(process.env));
     // return res.json({message:req} );
+    console.log(cloudinary.config())
     const { title, description } = req.body;
     const thumbnail = req.files.thumbnail[0];
     const video = req.files.video[0];

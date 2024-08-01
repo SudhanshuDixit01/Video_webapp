@@ -50,12 +50,14 @@ const UploadPage = () => {
           onChange={(e) => setDescription(e.target.value)}
           required
         />
+        <label>Image</label>
         <input
           type="file"
           accept=".jpg,.png"
           onChange={(e) => setThumbnail(e.target.files[0])}
           required
         />
+         <label>Video</label>
         <input
           type="file"
           accept=".mpg,.avi,.mp4"
