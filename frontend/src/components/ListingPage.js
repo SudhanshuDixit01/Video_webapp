@@ -9,7 +9,7 @@ const ListingPage = () => {
   useEffect(() => {
     const fetchMedia = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}`);
+        const response = await axios.get(`http://localhost:5000/api/media`);
         setMedia(response.data);
       } catch (error) {
         console.error(error);

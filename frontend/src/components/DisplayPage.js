@@ -10,7 +10,7 @@ const DisplayPage = () => {
   useEffect(() => {
     const fetchMedia = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/${id}`);
+        const response = await axios.get(`http://localhost:5000/api/media${id}`);
         setMedia(response.data);
       } catch (error) {
         console.error(error);
